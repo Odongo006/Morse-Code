@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 MORSE_CODE = {
   '.-' => 'A',
   '-...' => 'B',
@@ -29,8 +31,7 @@ MORSE_CODE = {
 
 def decode_word(word)
   chars = word.split
-  decoded_chars = chars.map { |char| decode_char(char) }.join
-  decoded_chars
+  chars.map { |char| decode_char(char) }.join
 end
 
 def decode_message(message)
